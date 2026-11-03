@@ -10,6 +10,12 @@ class Controller:
         # the model, which implements the logic of the program and holds the data
         self._model = model
 
+
+    def fillDD(self):
+        categorie = self._model.getAllCategories()
+        for c in categorie:
+            self._view._ddcategory.options.append(ft.dropdown.Option(c))
+
     def handleCreaGrafo(self, e):
         pass
 
